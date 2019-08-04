@@ -7,3 +7,7 @@
 The app allows users to upload photos and videos to the service, which can be edited with various filters, and organized with tags and location information. An account's posts can be shared publicly or with pre-approved followers. Users can browse other users' content by tags and locations, and view trending content. Users can "like" photos, and follow other users to add their content to a feed.
 
 ## Demo
+### feature/design-welcome-screen
+| Screenshot 01 |
+| ------------- |
+| ![screenshot01.png](.screenshots/screenshot01.png) |

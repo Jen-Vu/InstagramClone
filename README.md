@@ -11,3 +11,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 | Screenshot 01 |
 | ------------- |
 | ![screenshot01.png](.screenshots/screenshot01.png) |
+
+### feature/design-login-and-signup-screens
+| Screenshot 02 | Screenshot 03 |
+| ------------- | ------------- |
+| ![screenshot02.png](.screenshots/screenshot02.png) | ![screenshot03.png](.screenshots/screenshot03.png) |

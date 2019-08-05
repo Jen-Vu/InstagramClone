@@ -161,6 +161,9 @@
                                 <state key="normal" title="Create a new account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ujq-RZ-acQ" kind="show" id="a2G-Ev-6jf"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TP-km-LjT">
                                 <rect key="frame" x="32" y="387.5" width="129.5" height="0.5"/>
@@ -228,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="261-Ho-BLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2148" y="153"/>
+            <point key="canvasLocation" x="1078" y="969"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aNV-cU-JY6">
@@ -356,11 +359,84 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8b-mE-4N5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078" y="958"/>
+            <point key="canvasLocation" x="2015" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L8c-8a-0d3">
+            <objects>
+                <viewController id="Ujq-RZ-acQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mlp-Hg-UsA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup-profilePicturePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Kmh-aT-mZi">
+                                <rect key="frame" x="137.5" y="60" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6Gl-Vi-s6s"/>
+                                    <constraint firstAttribute="width" constant="100" id="uG0-UJ-bxt"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Profile Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIE-MB-b1s">
+                                <rect key="frame" x="107" y="184" width="161" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a profile photo so your friends know it's you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZr-cC-Mta">
+                                <rect key="frame" x="54.5" y="235" width="266" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="SX9-Zx-vgg"/>
+                                    <constraint firstAttribute="width" constant="266" id="ZXX-Bf-NyJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhn-63-bpr">
+                                <rect key="frame" x="32" y="303" width="311" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OES-pQ-va8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Add a Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgz-OG-q8o">
+                                <rect key="frame" x="170" y="371" width="35" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="44t-HA-rzS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Skip"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZZr-cC-Mta" firstAttribute="centerX" secondItem="mlp-Hg-UsA" secondAttribute="centerX" id="F3y-2i-uAW"/>
+                            <constraint firstItem="Kmh-aT-mZi" firstAttribute="centerX" secondItem="mlp-Hg-UsA" secondAttribute="centerX" id="HN1-Qb-yMi"/>
+                            <constraint firstItem="XIE-MB-b1s" firstAttribute="centerX" secondItem="mlp-Hg-UsA" secondAttribute="centerX" id="d3H-7W-U57"/>
+                            <constraint firstItem="Kmh-aT-mZi" firstAttribute="top" secondItem="lno-06-rbr" secondAttribute="top" constant="40" id="fXN-Va-UOl"/>
+                            <constraint firstItem="XIE-MB-b1s" firstAttribute="top" secondItem="Kmh-aT-mZi" secondAttribute="bottom" constant="24" id="fm6-5X-aVJ"/>
+                            <constraint firstItem="ZZr-cC-Mta" firstAttribute="top" secondItem="XIE-MB-b1s" secondAttribute="bottom" constant="24" id="j9w-mb-AVi"/>
+                            <constraint firstItem="vhn-63-bpr" firstAttribute="leading" secondItem="lno-06-rbr" secondAttribute="leading" constant="32" id="lEm-ug-ue5"/>
+                            <constraint firstItem="vhn-63-bpr" firstAttribute="top" secondItem="ZZr-cC-Mta" secondAttribute="bottom" constant="24" id="ouj-Es-sAk"/>
+                            <constraint firstItem="mgz-OG-q8o" firstAttribute="top" secondItem="vhn-63-bpr" secondAttribute="bottom" constant="24" id="qHt-bC-JYu"/>
+                            <constraint firstItem="mgz-OG-q8o" firstAttribute="centerX" secondItem="mlp-Hg-UsA" secondAttribute="centerX" id="r3y-a4-YcO"/>
+                            <constraint firstItem="lno-06-rbr" firstAttribute="trailing" secondItem="vhn-63-bpr" secondAttribute="trailing" constant="32" id="ue6-OG-23y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lno-06-rbr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uiU-eO-JPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2013.5999999999999" y="967.4662668665668"/>
         </scene>
     </scenes>
     <resources>
         <image name="login-instagram" width="2318" height="464"/>
+        <image name="signup-profilePicturePlaceholder" width="527" height="528"/>
         <image name="welcome-gradient" width="1972" height="1460"/>
     </resources>
     <inferredMetricsTieBreakers>

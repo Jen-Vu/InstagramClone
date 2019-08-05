@@ -16,3 +16,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 | Screenshot 02 | Screenshot 03 |
 | ------------- | ------------- |
 | ![screenshot02.png](.screenshots/screenshot02.png) | ![screenshot03.png](.screenshots/screenshot03.png) |
+
+### feature/design-upload-profile-photo-screen
+| Screenshot 04 |
+| ------------- |
+| ![screenshot04.png](.screenshots/screenshot04.png) |

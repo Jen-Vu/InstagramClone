@@ -361,15 +361,15 @@
             </objects>
             <point key="canvasLocation" x="2015" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile Photo View Controller-->
         <scene sceneID="L8c-8a-0d3">
             <objects>
-                <viewController id="Ujq-RZ-acQ" sceneMemberID="viewController">
+                <viewController id="Ujq-RZ-acQ" customClass="ProfilePhotoViewController" customModule="InstagramClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mlp-Hg-UsA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup-profilePicturePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Kmh-aT-mZi">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup-profilePicturePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Kmh-aT-mZi">
                                 <rect key="frame" x="137.5" y="60" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="6Gl-Vi-s6s"/>
@@ -402,14 +402,21 @@
                                 <state key="normal" title="Add a Photo">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPhotoButtonTapped:" destination="Ujq-RZ-acQ" eventType="touchUpInside" id="ipE-rE-zfZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgz-OG-q8o">
-                                <rect key="frame" x="170" y="371" width="35" height="44"/>
+                                <rect key="frame" x="157.5" y="371" width="60" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="44t-HA-rzS"/>
+                                    <constraint firstAttribute="width" constant="60" id="KSh-jf-SsN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="Skip"/>
+                                <connections>
+                                    <action selector="skipButtonTapped:" destination="Ujq-RZ-acQ" eventType="touchUpInside" id="H53-Ls-EVt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -428,6 +435,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lno-06-rbr"/>
                     </view>
+                    <connections>
+                        <outlet property="addPhotoButton" destination="vhn-63-bpr" id="tQo-Aq-FgD"/>
+                        <outlet property="profilePhotoImageView" destination="Kmh-aT-mZi" id="cbw-oJ-HlE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiU-eO-JPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

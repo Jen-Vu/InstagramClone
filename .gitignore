@@ -66,3 +66,10 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Firebase
+#
+# It is not the end of the world if you want to add it to your repo
+# the data on the GoogleService-Info.plist it is not exactly private
+# so it is up to you if you want to ignore it.
+GoogleService-Info.plist

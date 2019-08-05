@@ -26,3 +26,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 | Screenshot 05 | Screenshot 06 |
 | ------------- | ------------- |
 | ![screenshot05.png](.screenshots/screenshot05.png) | ![screenshot06.png](.screenshots/screenshot06.png) |
+
+### feature/app-icon
+| Screenshot 07 |
+| ------------- |
+| ![screenshot07.png](.screenshots/screenshot07.png) |

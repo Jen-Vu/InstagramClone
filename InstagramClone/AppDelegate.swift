@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Use Firebase library to configure APIs
     FirebaseApp.configure()
+    UIImage(named: "welcome-gradient")?.uploadToFirebase(path: "examples/gradient.jpg", completion: { (url, error) in
+      print("download url: \(url)")
+    })
     return true
   }
 

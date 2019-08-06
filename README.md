@@ -35,3 +35,7 @@ The app allows users to upload photos and videos to the service, which can be ed
 ### feature/integrate-firebase-with-cocoapods
 > On this section there is no demo, because is the same as before.
 > Here we just link our app with `Firebase`, the `GoogleService-Info.plist` is not on the repo, so, create a new `Firebase` project and download your own file.
+
+### feature/factor-image-uploading-code
+> On this section there is no demo, because is the same as before.
+> We create an extension of `UIImage` to let the image be uploaded to `Firebase Storage`.

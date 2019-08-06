@@ -18,10 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Use Firebase library to configure APIs
     FirebaseApp.configure()
-    let fdorado = User(uid: "919191919191", username: "fdorado", fullName: "Juan Dorado", profileImage: UIImage(named: "icon-defaultAvatar"))
-    fdorado.save { (error) in
-      debugPrint("Error or not: \(String(describing: error?.localizedDescription))")
-    }
     return true
   }
 

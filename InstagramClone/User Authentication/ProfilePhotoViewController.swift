@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfilePhotoViewController: UIViewController {
 
@@ -41,6 +42,47 @@ class ProfilePhotoViewController: UIViewController {
       self.profilePhotoImageView.image = image
       self.profilePhotoImageView.layer.cornerRadius = self.profilePhotoImageView.bounds.width / 2.0
       self.profilePhotoImageView.layer.masksToBounds = true
+
+      // unwrap values
+      guard let email = self.email, !email.isEmpty,
+        let username = self.username, !username.isEmpty,
+        let password = self.password, !password.isEmpty else {
+          fatalError("User data wasn't shared")
+      }
+
+      // Create a new user using Firebase auth
+      Auth.auth().createUser(withEmail: email, password: password, completion: { (result, error) in
+        if let error = error {
+          print("Error creating new user: \(error.localizedDescription)")
+          return
+        }
+
+        guard let user = result?.user else { return }
+
+        // create a new user instance to save to firebase database
+        let newUser = User(uid: user.uid, username: username, fullName: "", profileImage: self.selectedImage)
+
+        // save user to database
+        newUser.save({ (error) in
+          if let error = error {
+            print("Error saving user data to the database: \(error.localizedDescription)")
+            return
+          }
+
+          // time to login, show the newsfeed
+          Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
+            if let error = error {
+              print("Error loggin in: \(error.localizedDescription)")
+              return
+            }
+
+            // TODO: show the newsfeed
+          })
+        })
+      })
+
+
+
     })
   }
 

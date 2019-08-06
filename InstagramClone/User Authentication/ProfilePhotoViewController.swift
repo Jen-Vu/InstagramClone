@@ -10,6 +10,10 @@ import UIKit
 
 class ProfilePhotoViewController: UIViewController {
 
+  // MARK: - Static Properties
+
+  static let identifier = "showProfilePhotoViewController"
+
   // MARK: - Outlets
 
   @IBOutlet var profilePhotoImageView: UIImageView!
@@ -19,6 +23,9 @@ class ProfilePhotoViewController: UIViewController {
 
   var imagePickerHelper: ImagePickerHelper?
   var selectedImage: UIImage?
+  var email: String?
+  var username: String?
+  var password: String?
 
   // MARK: - View Lifecycle
   

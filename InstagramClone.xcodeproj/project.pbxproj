@@ -18,6 +18,7 @@
 		A91D014F22F7FBBA00AE3747 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A91D014E22F7FBBA00AE3747 /* GoogleService-Info.plist */; };
 		A9FA0D4D22F92D5D004BC24F /* UIImage+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA0D4C22F92D5D004BC24F /* UIImage+Firebase.swift */; };
 		A9FA0D5122F92FE0004BC24F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA0D5022F92FE0004BC24F /* User.swift */; };
+		A9FA0D5322F954A9004BC24F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA0D5222F954A9004BC24F /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A91D014E22F7FBBA00AE3747 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9FA0D4C22F92D5D004BC24F /* UIImage+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Firebase.swift"; sourceTree = "<group>"; };
 		A9FA0D5022F92FE0004BC24F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A9FA0D5222F954A9004BC24F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C13BE6DCF96B152A315BFD8E /* Pods-InstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.release.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,8 +83,6 @@
 				A91D013F22F78BF900AE3747 /* Assets.xcassets */,
 				A91D014122F78BF900AE3747 /* LaunchScreen.storyboard */,
 				A91D014422F78BF900AE3747 /* Info.plist */,
-				A91D014A22F7C68F00AE3747 /* ImagePickerHelper.swift */,
-				A91D014C22F7C8B600AE3747 /* ProfilePhotoViewController.swift */,
 			);
 			path = InstagramClone;
 			sourceTree = "<group>";
@@ -90,6 +90,7 @@
 		A9FA0D4B22F92D4A004BC24F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A91D014A22F7C68F00AE3747 /* ImagePickerHelper.swift */,
 				A9FA0D4C22F92D5D004BC24F /* UIImage+Firebase.swift */,
 			);
 			path = Utilities;
@@ -106,6 +107,8 @@
 		A9FA0D4F22F92FD2004BC24F /* User Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				A91D014C22F7C8B600AE3747 /* ProfilePhotoViewController.swift */,
+				A9FA0D5222F954A9004BC24F /* SignUpViewController.swift */,
 			);
 			path = "User Authentication";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A91D013B22F78BF800AE3747 /* ViewController.swift in Sources */,
+				A9FA0D5322F954A9004BC24F /* SignUpViewController.swift in Sources */,
 				A91D014B22F7C68F00AE3747 /* ImagePickerHelper.swift in Sources */,
 				A9FA0D5122F92FE0004BC24F /* User.swift in Sources */,
 				A91D014D22F7C8B600AE3747 /* ProfilePhotoViewController.swift in Sources */,

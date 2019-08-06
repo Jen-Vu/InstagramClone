@@ -43,3 +43,7 @@ The app allows users to upload photos and videos to the service, which can be ed
 ### feature/upload-user-data-to-firestore
 > On this section there is no demo, because is the same as before.
 > We create a data model for user with an extension to `Firebase` to be able to save it on `Firestore`
+
+### feature/signup-view-controller
+> On this section there is no demo, because is the same as before.
+> We create the `ViewController` for the `Sign Up` Screen.

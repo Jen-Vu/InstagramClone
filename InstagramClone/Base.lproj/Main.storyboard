@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="exF-P6-97H">
             <objects>
-                <viewController id="fUx-Fa-0w4" sceneMemberID="viewController">
+                <viewController id="fUx-Fa-0w4" customClass="SignUpViewController" customModule="InstagramClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wLi-lh-obv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +162,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ujq-RZ-acQ" kind="show" id="a2G-Ev-6jf"/>
+                                    <action selector="createNewAccountButtonTapped:" destination="fUx-Fa-0w4" eventType="touchUpInside" id="d9f-yL-1vP"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TP-km-LjT">
@@ -193,6 +193,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <state key="normal" title="Login with existing account"/>
                                 <connections>
+                                    <action selector="loginButtonDidTapped:" destination="fUx-Fa-0w4" eventType="touchUpInside" id="hF1-U0-HhX"/>
                                     <segue destination="7pd-4g-0OH" kind="show" id="E4o-xO-hCj"/>
                                 </connections>
                             </button>
@@ -228,6 +229,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UJy-vK-0EJ"/>
                     </view>
+                    <connections>
+                        <outlet property="createNewAccountButton" destination="wAK-fj-P0g" id="y75-aK-aGH"/>
+                        <outlet property="emailTextField" destination="w1H-vd-MxA" id="457-TE-On2"/>
+                        <outlet property="passwordTextField" destination="Eyt-Tc-Dg7" id="bnW-bA-NiZ"/>
+                        <outlet property="usernameTextField" destination="8gs-A5-dWa" id="maq-2l-kMC"/>
+                        <segue destination="Ujq-RZ-acQ" kind="show" identifier="showProfilePhotoViewController" id="ibH-bQ-P4Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="261-Ho-BLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -23,12 +23,23 @@ class User {
   var follows = [User]()
   var followedBy = [User]()
 
+  // MARK: - Lifecycle
+
   init(uid: String, username: String, fullName: String, profileImage: UIImage?) {
     self.uid = uid
     self.username = username
     self.fullName = fullName
     self.profileImage = profileImage
   }
+
+  init(dictionary: [String : Any]) {
+    self.uid = dictionary["uid"] as? String ?? ""
+    self.username = dictionary["username"] as? String ?? ""
+    self.fullName = dictionary["fullName"] as? String ?? ""
+    self.profileImageURL = dictionary["profileImageURL"] as? String ?? ""
+  }
+
+  // MARK: - Methods
 
   func dictionary() -> [String : Any] {
     return [

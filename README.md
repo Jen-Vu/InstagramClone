@@ -51,3 +51,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 ### feature/signup-users-and-save-to-firebase
 > On this section there is no demo, because is the same as before.
 > We add the code to Authenticate|SignIn|Save authenticated data on `Firebase`.
+
+### feature/observe-user-login-and-download-current-user-data
+| Screenshot 08 |
+| ------------- |
+| ![screenshot08.png](.screenshots/screenshot08.png) |

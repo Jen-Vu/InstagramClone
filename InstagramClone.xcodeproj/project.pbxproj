@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		67A5B8F683E4958E4D94BFE9 /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645CD2E6F63A020036D23CA7 /* Pods_InstagramClone.framework */; };
 		A91D013922F78BF800AE3747 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D013822F78BF800AE3747 /* AppDelegate.swift */; };
-		A91D013B22F78BF800AE3747 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D013A22F78BF800AE3747 /* ViewController.swift */; };
 		A91D013E22F78BF800AE3747 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91D013C22F78BF800AE3747 /* Main.storyboard */; };
 		A91D014022F78BF900AE3747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91D013F22F78BF900AE3747 /* Assets.xcassets */; };
 		A91D014322F78BF900AE3747 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91D014122F78BF900AE3747 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,7 @@
 		A91D014D22F7C8B600AE3747 /* ProfilePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D014C22F7C8B600AE3747 /* ProfilePhotoViewController.swift */; };
 		A91D014F22F7FBBA00AE3747 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A91D014E22F7FBBA00AE3747 /* GoogleService-Info.plist */; };
 		A998581422FA3D1F009783A7 /* NewsFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998581322FA3D1F009783A7 /* NewsFeedTableViewController.swift */; };
+		A998581722FA73DB009783A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998581622FA73DB009783A7 /* ProfileViewController.swift */; };
 		A9FA0D4D22F92D5D004BC24F /* UIImage+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA0D4C22F92D5D004BC24F /* UIImage+Firebase.swift */; };
 		A9FA0D5122F92FE0004BC24F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA0D5022F92FE0004BC24F /* User.swift */; };
 		A9FA0D5322F954A9004BC24F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA0D5222F954A9004BC24F /* SignUpViewController.swift */; };
@@ -27,7 +27,6 @@
 		645CD2E6F63A020036D23CA7 /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91D013522F78BF800AE3747 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91D013822F78BF800AE3747 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A91D013A22F78BF800AE3747 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A91D013D22F78BF800AE3747 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A91D013F22F78BF900AE3747 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A91D014222F78BF900AE3747 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		A91D014C22F7C8B600AE3747 /* ProfilePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoViewController.swift; sourceTree = "<group>"; };
 		A91D014E22F7FBBA00AE3747 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A998581322FA3D1F009783A7 /* NewsFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewController.swift; sourceTree = "<group>"; };
+		A998581622FA73DB009783A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A9FA0D4C22F92D5D004BC24F /* UIImage+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Firebase.swift"; sourceTree = "<group>"; };
 		A9FA0D5022F92FE0004BC24F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A9FA0D5222F954A9004BC24F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -75,13 +75,13 @@
 		A91D013722F78BF800AE3747 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				A998581522FA7383009783A7 /* Profile */,
 				A998581222FA3D0E009783A7 /* NewsFeed */,
 				A9FA0D4F22F92FD2004BC24F /* User Authentication */,
 				A9FA0D4E22F92FC1004BC24F /* Model */,
 				A9FA0D4B22F92D4A004BC24F /* Utilities */,
 				A91D014E22F7FBBA00AE3747 /* GoogleService-Info.plist */,
 				A91D013822F78BF800AE3747 /* AppDelegate.swift */,
-				A91D013A22F78BF800AE3747 /* ViewController.swift */,
 				A91D013C22F78BF800AE3747 /* Main.storyboard */,
 				A91D013F22F78BF900AE3747 /* Assets.xcassets */,
 				A91D014122F78BF900AE3747 /* LaunchScreen.storyboard */,
@@ -96,6 +96,14 @@
 				A998581322FA3D1F009783A7 /* NewsFeedTableViewController.swift */,
 			);
 			path = NewsFeed;
+			sourceTree = "<group>";
+		};
+		A998581522FA7383009783A7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A998581622FA73DB009783A7 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		A9FA0D4B22F92D4A004BC24F /* Utilities */ = {
@@ -257,12 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91D013B22F78BF800AE3747 /* ViewController.swift in Sources */,
 				A9FA0D5322F954A9004BC24F /* SignUpViewController.swift in Sources */,
 				A91D014B22F7C68F00AE3747 /* ImagePickerHelper.swift in Sources */,
 				A9FA0D5122F92FE0004BC24F /* User.swift in Sources */,
 				A998581422FA3D1F009783A7 /* NewsFeedTableViewController.swift in Sources */,
 				A91D014D22F7C8B600AE3747 /* ProfilePhotoViewController.swift in Sources */,
+				A998581722FA73DB009783A7 /* ProfileViewController.swift in Sources */,
 				A91D013922F78BF800AE3747 /* AppDelegate.swift in Sources */,
 				A9FA0D4D22F92D5D004BC24F /* UIImage+Firebase.swift in Sources */,
 			);

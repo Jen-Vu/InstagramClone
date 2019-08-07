@@ -271,7 +271,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4c-GJ-Pgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559" y="1408"/>
+            <point key="canvasLocation" x="-610" y="911"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aNV-cU-JY6">
@@ -291,10 +291,10 @@
             </objects>
             <point key="canvasLocation" x="170" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="VhF-xj-61p">
             <objects>
-                <viewController id="7pd-4g-0OH" sceneMemberID="viewController">
+                <viewController id="7pd-4g-0OH" customClass="LoginViewController" customModule="InstagramClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="efF-Fk-ECz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -335,6 +335,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="7pd-4g-0OH" eventType="touchUpInside" id="aUY-TJ-kMT"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5H-Hj-0cR">
                                 <rect key="frame" x="32" y="331.5" width="129.5" height="0.5"/>
@@ -396,6 +399,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FFJ-Sj-Q1n"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="TOa-wZ-FGG" id="QCk-x8-CZa"/>
+                        <outlet property="passwordTextField" destination="NA4-0E-GaA" id="ScI-5D-97R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i8b-mE-4N5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -501,7 +508,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcY-QH-zSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1497" y="1408"/>
+            <point key="canvasLocation" x="-1550" y="911"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Yde-jo-7I3">
@@ -520,7 +527,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hy-gw-dgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2436" y="1408"/>
+            <point key="canvasLocation" x="-2487" y="911"/>
         </scene>
         <!--Item-->
         <scene sceneID="E9n-mq-K5I">
@@ -539,7 +546,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Yy-rd-Isb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1498" y="2169"/>
+            <point key="canvasLocation" x="-1550" y="1672"/>
         </scene>
         <!--Profile-->
         <scene sceneID="aga-1g-40E">
@@ -562,7 +569,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udR-TJ-nWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559" y="2168"/>
+            <point key="canvasLocation" x="-610" y="1671"/>
         </scene>
     </scenes>
     <resources>

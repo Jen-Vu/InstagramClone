@@ -17,6 +17,7 @@
 		A91D014F22F7FBBA00AE3747 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A91D014E22F7FBBA00AE3747 /* GoogleService-Info.plist */; };
 		A998581422FA3D1F009783A7 /* NewsFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998581322FA3D1F009783A7 /* NewsFeedTableViewController.swift */; };
 		A998581722FA73DB009783A7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998581622FA73DB009783A7 /* ProfileViewController.swift */; };
+		A9C93B2622FA76C500F0B190 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C93B2522FA76C500F0B190 /* LoginViewController.swift */; };
 		A9FA0D4D22F92D5D004BC24F /* UIImage+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA0D4C22F92D5D004BC24F /* UIImage+Firebase.swift */; };
 		A9FA0D5122F92FE0004BC24F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA0D5022F92FE0004BC24F /* User.swift */; };
 		A9FA0D5322F954A9004BC24F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA0D5222F954A9004BC24F /* SignUpViewController.swift */; };
@@ -36,6 +37,7 @@
 		A91D014E22F7FBBA00AE3747 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A998581322FA3D1F009783A7 /* NewsFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewController.swift; sourceTree = "<group>"; };
 		A998581622FA73DB009783A7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A9C93B2522FA76C500F0B190 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A9FA0D4C22F92D5D004BC24F /* UIImage+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Firebase.swift"; sourceTree = "<group>"; };
 		A9FA0D5022F92FE0004BC24F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A9FA0D5222F954A9004BC24F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				A91D014C22F7C8B600AE3747 /* ProfilePhotoViewController.swift */,
 				A9FA0D5222F954A9004BC24F /* SignUpViewController.swift */,
+				A9C93B2522FA76C500F0B190 /* LoginViewController.swift */,
 			);
 			path = "User Authentication";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C93B2622FA76C500F0B190 /* LoginViewController.swift in Sources */,
 				A9FA0D5322F954A9004BC24F /* SignUpViewController.swift in Sources */,
 				A91D014B22F7C68F00AE3747 /* ImagePickerHelper.swift in Sources */,
 				A9FA0D5122F92FE0004BC24F /* User.swift in Sources */,

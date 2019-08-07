@@ -58,5 +58,11 @@ The app allows users to upload photos and videos to the service, which can be ed
 | ![screenshot08.png](.screenshots/screenshot08.png) |
 
 ### feature/logout-users
-> On this section there is no demo, because is the same as before.
-> We add the code to `log out` the user from `Firebase`.
+| Screenshot 09 |
+| ------------- |
+| ![screenshot09.png](.screenshots/screenshot09.png) |
+
+### feature/login-users
+| Screenshot 10 | Screenshot 11 |
+| ------------- | ------------- |
+| ![screenshot10.png](.screenshots/screenshot10.png) | ![screenshot11.png](.screenshots/screenshot11.png) |

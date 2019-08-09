@@ -522,8 +522,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="srR-5S-1p8" kind="relationship" relationship="viewControllers" id="K4F-HH-YiN"/>
-                        <segue destination="3pc-or-OR0" kind="relationship" relationship="viewControllers" id="9r2-0G-koi"/>
                         <segue destination="a2n-wz-Pzx" kind="relationship" relationship="viewControllers" id="O98-ym-EHT"/>
+                        <segue destination="3pc-or-OR0" kind="relationship" relationship="viewControllers" id="9r2-0G-koi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hy-gw-dgw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -733,9 +733,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New Post" id="mj8-0B-Vx0">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ceG-pL-eps"/>
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="uyR-mW-032"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ceG-pL-eps">
+                            <connections>
+                                <action selector="cancelBarButtonItemTapped:" destination="Ln5-PR-AKN" id="Q8Y-f4-Qk3"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="uyR-mW-032">
+                            <connections>
+                                <action selector="shareBarButtonItemTapped:" destination="Ln5-PR-AKN" id="PfE-Qz-Xyq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="bmf-Fr-C3A" id="mwf-B8-hLq"/>
+                        <outlet property="shareBarButtonItem" destination="uyR-mW-032" id="oaI-bY-Ned"/>
+                        <outlet property="textView" destination="oFP-OV-x6E" id="ESJ-uT-Xnd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yff-T7-RJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

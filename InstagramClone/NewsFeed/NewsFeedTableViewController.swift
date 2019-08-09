@@ -11,6 +11,10 @@ import Firebase
 
 class NewsFeedTableViewController: UITableViewController {
 
+  // MARK: - Properties
+
+  var currentUser: User?
+
   // MARK: - View Lifecycle
 
   override func viewDidLoad() {
@@ -29,12 +33,8 @@ class NewsFeedTableViewController: UITableViewController {
         let ref = Firestore.firestore().collection("users").document(user.uid)
         ref.getDocument(completion: { (document, error) in
           // get the current user to use it later
-          if let user = document.flatMap({
-            $0.data().flatMap({ (data) in
-              return User(dictionary: data)
-            })
-          }) {
-            print("User: \(user)")
+          if let user = document.flatMap({ $0.data().flatMap({ (data) in return User(dictionary: data) }) }) {
+            self.currentUser = user
           } else {
             print("Document does not exist")
           }

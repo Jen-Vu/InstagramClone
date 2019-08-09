@@ -38,8 +38,10 @@ class ProfilePhotoViewController: UIViewController {
 
   @IBAction func addPhotoButtonTapped(_ sender: UIButton) {
     imagePickerHelper = ImagePickerHelper(viewController: self, completion: { (image) in
-      self.selectedImage = image
-      self.profilePhotoImageView.image = image
+      guard let unwrappedImage = image else { return }
+      self.addPhotoButton.isEnabled = false
+      self.selectedImage = unwrappedImage
+      self.profilePhotoImageView.image = unwrappedImage
       self.profilePhotoImageView.layer.cornerRadius = self.profilePhotoImageView.bounds.width / 2.0
       self.profilePhotoImageView.layer.masksToBounds = true
 

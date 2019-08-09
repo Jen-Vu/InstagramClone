@@ -48,23 +48,33 @@ class PostComposerTableViewController: UITableViewController {
       docRef.getDocument(completion: { (document, error) in
         // get the current user to use it later
         if let user = document.flatMap({ $0.data().flatMap({ (data) in return User(dictionary: data) }) }) {
-          // you got the current user
-          print("==== CURRENT USER")
-          print(user.username)
+          // create a new post instance
+          let newPost = Post(type: "image", caption: caption, createdBy: user, image: image)
+
+          // save the post to db
+          newPost.save({ (error) in
+            if let error = error {
+              print("**** Error saving post: \(error.localizedDescription)")
+              self.cancel()
+            }
+          })
+
+          // go back to the newsfeed
+          self.cancel()
         } else {
           print("Document does not exist")
         }
       })
-      
-      // create a new post instance
-
-      // save the post to db
-
-      // go back to the newsfeed
     }
   }
 
   @IBAction func cancelBarButtonItemTapped(_ sender: UIBarButtonItem) {
+    self.cancel()
+  }
+
+  // MARK: - Methods
+
+  private func cancel() {
     image = nil
     imageView.image = nil
     textView.resignFirstResponder()

@@ -79,3 +79,7 @@ The app allows users to upload photos and videos to the service, which can be ed
 ### feature/create-post-model-class
 > On this section there is no demo, because is the same as before.
 > We create our `Post` class to be the model of our posts and add the code to save on Firebase.
+
+### feature/share-a-new-post
+> On this section there is no demo, because is the same as before.
+> We add the code to the `PostComposerTableViewController` to use the `Post` model and upload the post data on `Firestore`.

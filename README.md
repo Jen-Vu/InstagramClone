@@ -66,3 +66,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 | Screenshot 10 | Screenshot 11 |
 | ------------- | ------------- |
 | ![screenshot10.png](.screenshots/screenshot10.png) | ![screenshot11.png](.screenshots/screenshot11.png) |
+
+### feature/design-post-composer
+| Screenshot 12 |
+| ------------- |
+| ![screenshot12.png](.screenshots/screenshot12.png) |

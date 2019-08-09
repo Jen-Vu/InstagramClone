@@ -55,6 +55,7 @@ class PostComposerTableViewController: UITableViewController {
           print("Document does not exist")
         }
       })
+      
       // create a new post instance
 
       // save the post to db

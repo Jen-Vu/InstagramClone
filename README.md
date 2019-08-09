@@ -75,3 +75,7 @@ The app allows users to upload photos and videos to the service, which can be ed
 ### feature/code-post-composer-vc
 > On this section there is no demo, because is the same as before.
 > We add the code to `PostComposerTableViewController` to be able to get the user info and be prepare to upload the post.
+
+### feature/create-post-model-class
+> On this section there is no demo, because is the same as before.
+> We create our `Post` class to be the model of our posts and add the code to save on Firebase.

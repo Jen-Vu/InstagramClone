@@ -18,17 +18,17 @@ class ImagePickerHelper: NSObject {
 
   // MARK: - Lifecycle
 
-  init(viewController: UIViewController, completion: @escaping ((UIImage?) -> Void)) {
+  init(viewController: UIViewController, cancelAction: Bool = true, completion: @escaping ((UIImage?) -> Void)) {
     self.viewController = viewController
     self.completion = completion
     super.init()
 
-    self.showPhotoSourceSelection()
+    self.showPhotoSourceSelection(cancelAction)
   }
 
   // MARK: - Methods
 
-  private func showPhotoSourceSelection() {
+  private func showPhotoSourceSelection(_ cancelAction: Bool) {
     let ac = UIAlertController(title: "Pick New Photo", message: "Would you like to open photos library or camera", preferredStyle: .actionSheet)
     ac.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
       if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -38,7 +38,11 @@ class ImagePickerHelper: NSObject {
     ac.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action) in
       self.showImagePicker(sourceType: .photoLibrary)
     }))
-    ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+
+    if cancelAction {
+      ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+    }
+
     viewController?.present(ac, animated: true)
   }
 

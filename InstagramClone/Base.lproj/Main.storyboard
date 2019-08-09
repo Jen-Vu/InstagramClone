@@ -757,7 +757,7 @@
         <!--Item-->
         <scene sceneID="O6j-cJ-tgw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a2n-wz-Pzx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PostComposerNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="a2n-wz-Pzx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="D7A-YD-3Yr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dWA-LD-OFk">

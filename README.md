@@ -83,3 +83,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 ### feature/share-a-new-post
 > On this section there is no demo, because is the same as before.
 > We add the code to the `PostComposerTableViewController` to use the `Post` model and upload the post data on `Firestore`.
+
+### feature/trigger-imagepicker-when-tap-on-camera-tab
+| Screenshot 13 | Screenshot 14 |
+| ------------- | ------------- |
+| ![screenshot13.png](.screenshots/screenshot13.png) | ![screenshot14.png](.screenshots/screenshot14.png) |

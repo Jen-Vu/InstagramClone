@@ -81,6 +81,7 @@ class PostComposerTableViewController: UITableViewController {
     textView.text = ""
 
     self.tabBarController?.selectedIndex = 0
+    self.dismiss(animated: true)
   }
 }
 

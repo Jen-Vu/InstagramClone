@@ -14,12 +14,15 @@ class NewsFeedTableViewController: UITableViewController {
   // MARK: - Properties
 
   var currentUser: User?
+  var imagePickerHelper: ImagePickerHelper?
 
   // MARK: - View Lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
     observeUserLogin()
+
+    tabBarController?.delegate = self
   }
 
   // MARK: - Methods
@@ -44,5 +47,34 @@ class NewsFeedTableViewController: UITableViewController {
         self.performSegue(withIdentifier: "ShowWelcome", sender: nil)
       }
     }
+  }
+}
+
+// MARK: - UITabBarControllerDelegate
+
+extension NewsFeedTableViewController: UITabBarControllerDelegate {
+
+  func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+    if let index = tabBarController.viewControllers?.firstIndex(of: viewController), index == 1 {
+      imagePickerHelper = ImagePickerHelper(viewController: self, cancelAction: false, completion: { (image) in
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let postComposerNav = storyboard.instantiateViewController(withIdentifier: "PostComposerNavigationController") as? UINavigationController else {
+          print("***** Error: could not get UINavigationController of PostComposerTableViewController")
+          return
+        }
+
+        guard let postComposerVC = postComposerNav.viewControllers.first as? PostComposerTableViewController else {
+          print("***** Error: could not get PostComposerTableViewController")
+          return
+        }
+        
+        postComposerVC.image = image
+        self.present(postComposerNav, animated: true)
+      })
+      
+      return false
+    }
+
+    return true
   }
 }

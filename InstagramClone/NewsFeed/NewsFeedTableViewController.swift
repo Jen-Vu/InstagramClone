@@ -15,6 +15,13 @@ class NewsFeedTableViewController: UITableViewController {
 
   var currentUser: User?
   var imagePickerHelper: ImagePickerHelper?
+  var posts: [Post]?
+
+  struct Storyboard {
+    static let postCell = "PostTableViewCell"
+    static let postHeaderCell = "PostHeaderTableViewCell"
+    static let postHeaderHeight: CGFloat = 56.0
+  }
 
   // MARK: - View Lifecycle
 
@@ -47,6 +54,45 @@ class NewsFeedTableViewController: UITableViewController {
         self.performSegue(withIdentifier: "ShowWelcome", sender: nil)
       }
     }
+  }
+}
+
+// MARK: - Tableview Delegates
+
+extension NewsFeedTableViewController {
+
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    if let posts = posts {
+      return posts.count
+    }
+
+    return 0
+  }
+
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if posts != nil {
+      return 1
+    }
+
+    return 0
+  }
+
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postCell, for: indexPath) as? PostTableViewCell else { fatalError("Could not load \(Storyboard.postCell)") }
+    cell.post = posts?[indexPath.section]
+    cell.selectionStyle = .none
+    return cell
+  }
+
+  override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postHeaderCell) as? PostHeaderTableViewCell else { fatalError("Could not load \(Storyboard.postHeaderCell)") }
+    cell.post = posts?[section]
+    cell.backgroundColor = .white
+    return cell
+  }
+
+  override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return Storyboard.postHeaderHeight
   }
 }
 

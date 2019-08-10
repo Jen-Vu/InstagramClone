@@ -37,14 +37,6 @@ class Post {
 
     docRef = db.collection("posts").document()
     self.uid = docRef!.documentID
-//      .addDocument(data: [:], completion: { (error) in
-//      if let err = error {
-//        print("Error adding document: \(err)")
-//      } else {
-//        print("Document added with ID: \(self.docRef!.documentID)")
-//        self.uid = self.docRef!.documentID
-//      }
-//    })
   }
 
   // MARK: - Methods

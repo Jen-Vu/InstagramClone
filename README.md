@@ -92,3 +92,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 ### feature/making-changes-newsfeed
 > On this section there is no demo, because is the same as before.
 > We bring the Newsfeed from the repo [fdorado985/InstagramNewsFeedUI](https://github.com/fdorado985/InstagramNewsFeedUI) and bring it on this project.
+
+### feature/fetch-posts-to-newsfeed
+| Screenshot 15 |
+| ------------- |
+| ![screenshot15.png](.screenshots/screenshot15.png) |

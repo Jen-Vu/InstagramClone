@@ -15,7 +15,7 @@ class NewsFeedTableViewController: UITableViewController {
 
   var currentUser: User?
   var imagePickerHelper: ImagePickerHelper?
-  var posts: [Post]?
+  var posts: [Post]? = []
 
   struct Storyboard {
     static let postCell = "PostTableViewCell"
@@ -64,7 +64,17 @@ class NewsFeedTableViewController: UITableViewController {
         print("Error fetching documents: \(error!)")
         return
       }
-      print(documents.first?.data())
+
+      documents.map { Post(dictionary: $0.data()) }
+        .forEach {
+          self.posts?.insert($0, at: 0)
+
+          DispatchQueue.main.async {
+            self.tableView.reloadData()
+          }
+
+          print($0.uid)
+      }
     }
   }
 }

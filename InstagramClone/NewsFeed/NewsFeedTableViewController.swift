@@ -27,9 +27,10 @@ class NewsFeedTableViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    observeUserLogin()
-
     tabBarController?.delegate = self
+
+    observeUserLogin()
+    fetchPosts()
   }
 
   // MARK: - Methods
@@ -53,6 +54,17 @@ class NewsFeedTableViewController: UITableViewController {
         // user isn't logged in yet
         self.performSegue(withIdentifier: "ShowWelcome", sender: nil)
       }
+    }
+  }
+
+  private func fetchPosts() {
+    let db = Firestore.firestore()
+    db.collection("posts").addSnapshotListener { (querySnapshot, error) in
+      guard let documents = querySnapshot?.documents else {
+        print("Error fetching documents: \(error!)")
+        return
+      }
+      print(documents.first?.data())
     }
   }
 }

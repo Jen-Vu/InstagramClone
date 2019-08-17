@@ -97,3 +97,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 | Screenshot 15 |
 | ------------- |
 | ![screenshot15.png](.screenshots/screenshot15.png) |
+
+### feature/download-post-images
+| Screenshot 16 |
+| ------------- |
+| ![screenshot16.png](.screenshots/screenshot16.png) |

@@ -241,7 +241,7 @@
             </objects>
             <point key="canvasLocation" x="2049" y="-280"/>
         </scene>
-        <!--News Feed Table View Controller-->
+        <!--Instagram-->
         <scene sceneID="uyi-LO-dT6">
             <objects>
                 <tableViewController id="Ggl-g2-jQG" customClass="NewsFeedTableViewController" customModule="InstagramClone" customModuleProvider="target" sceneMemberID="viewController">
@@ -250,14 +250,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostHeaderTableViewCell" rowHeight="57" id="0R4-oJ-30I" customClass="PostHeaderTableViewCell" customModule="InstagramNewsFeedUI" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostHeaderTableViewCell" rowHeight="57" id="0R4-oJ-30I" customClass="PostHeaderTableViewCell" customModule="InstagramClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0R4-oJ-30I" id="W5A-c5-pBK">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duc" translatesAutoresizingMaskIntoConstraints="NO" id="icg-wf-tdd">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duc" translatesAutoresizingMaskIntoConstraints="NO" id="icg-wf-tdd" customClass="IGImageView" customModule="InstagramClone" customModuleProvider="target">
                                             <rect key="frame" x="16" y="10.5" width="36" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="36" id="1Ry-wb-ch5"/>
@@ -295,14 +295,14 @@
                                     <outlet property="usernameButton" destination="UUY-Lo-am5" id="uKQ-Ik-UzD"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="645" id="Dnb-6Y-eav" customClass="PostTableViewCell" customModule="InstagramNewsFeedUI" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostTableViewCell" rowHeight="645" id="Dnb-6Y-eav" customClass="PostTableViewCell" customModule="InstagramClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="85" width="375" height="645"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dnb-6Y-eav" id="oqt-NE-z3q">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="644.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lVS-R7-hTf">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lVS-R7-hTf" customClass="IGImageView" customModule="InstagramClone" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="lVS-R7-hTf" secondAttribute="height" multiplier="1:1" id="6O9-8c-Vr1"/>
@@ -401,7 +401,7 @@
                             <outlet property="delegate" destination="Ggl-g2-jQG" id="S5m-rP-vaw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="dfz-dp-MYz"/>
+                    <navigationItem key="navigationItem" title="Instagram" id="dfz-dp-MYz"/>
                     <connections>
                         <segue destination="R5Y-Dr-roB" kind="show" identifier="ShowWelcome" id="6DJ-DU-tKb"/>
                     </connections>

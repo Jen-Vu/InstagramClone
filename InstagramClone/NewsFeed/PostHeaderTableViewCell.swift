@@ -12,7 +12,7 @@ class PostHeaderTableViewCell: UITableViewCell {
 
   // MARK: - Outlets
 
-  @IBOutlet var profileImageView: UIImageView!
+  @IBOutlet var profileImageView: IGImageView!
   @IBOutlet var usernameButton: UIButton!
   @IBOutlet var followButton: UIButton!
 
@@ -29,6 +29,10 @@ class PostHeaderTableViewCell: UITableViewCell {
   // MARK: - Methods
 
   private func updateUI() {
+    if let profileImageURL = post?.createdBy.profileImageURL {
+      profileImageView.loadImage(from: profileImageURL)
+    }
+
     profileImageView.image = post?.createdBy.profileImage
     profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2.0
     profileImageView.layer.masksToBounds = true

@@ -39,6 +39,18 @@ class Post {
     self.uid = docRef!.documentID
   }
 
+  init(dictionary: [String : Any]) {
+    self.uid = dictionary["uid"] as? String ?? ""
+    self.docRef = db.collection("posts").document(self.uid)
+    self.type = dictionary["type"] as? String ?? ""
+    self.caption = dictionary["caption"] as? String ?? ""
+    self.createdAt = dictionary["createdAt"] as? Double ?? 0.0
+    self.imageDownloadURL = dictionary["imageDownloadURL"] as? String
+
+    guard let createdByDictionary = dictionary["createdBy"] as? [String : Any] else { fatalError("Cannot cast createdBy user") }
+    self.createdBy = User(dictionary: createdByDictionary)
+  }
+
   // MARK: - Methods
 
   func dictionary() -> [String : Any] {

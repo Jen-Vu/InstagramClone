@@ -15,7 +15,7 @@ class NewsFeedTableViewController: UITableViewController {
 
   var currentUser: User?
   var imagePickerHelper: ImagePickerHelper?
-  var posts: [Post]?
+  var posts: [Post]? = []
 
   struct Storyboard {
     static let postCell = "PostTableViewCell"
@@ -27,9 +27,10 @@ class NewsFeedTableViewController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    observeUserLogin()
-
     tabBarController?.delegate = self
+
+    observeUserLogin()
+    fetchPosts()
   }
 
   // MARK: - Methods
@@ -52,6 +53,27 @@ class NewsFeedTableViewController: UITableViewController {
       } else {
         // user isn't logged in yet
         self.performSegue(withIdentifier: "ShowWelcome", sender: nil)
+      }
+    }
+  }
+
+  private func fetchPosts() {
+    let db = Firestore.firestore()
+    db.collection("posts").addSnapshotListener { (querySnapshot, error) in
+      guard let documents = querySnapshot?.documents else {
+        print("Error fetching documents: \(error!)")
+        return
+      }
+
+      documents.map { Post(dictionary: $0.data()) }
+        .forEach {
+          self.posts?.insert($0, at: 0)
+
+          DispatchQueue.main.async {
+            self.tableView.reloadData()
+          }
+
+          print($0.uid)
       }
     }
   }

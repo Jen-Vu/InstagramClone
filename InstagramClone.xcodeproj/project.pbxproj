@@ -21,6 +21,7 @@
 		A9AB3E8122FDCDC600CF63F1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AB3E8022FDCDC600CF63F1 /* Post.swift */; };
 		A9C93B2622FA76C500F0B190 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C93B2522FA76C500F0B190 /* LoginViewController.swift */; };
 		A9CCAB2F2307A45C008CE8D0 /* IGImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCAB2E2307A45C008CE8D0 /* IGImageView.swift */; };
+		A9CCAB312307A89D008CE8D0 /* CommentsComposerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCAB302307A89D008CE8D0 /* CommentsComposerViewController.swift */; };
 		A9F808EE22FEF37100359E2F /* PostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F808EC22FEF37100359E2F /* PostHeaderTableViewCell.swift */; };
 		A9F808EF22FEF37100359E2F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F808ED22FEF37100359E2F /* PostTableViewCell.swift */; };
 		A9FA0D4D22F92D5D004BC24F /* UIImage+Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FA0D4C22F92D5D004BC24F /* UIImage+Firebase.swift */; };
@@ -46,6 +47,7 @@
 		A9AB3E8022FDCDC600CF63F1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A9C93B2522FA76C500F0B190 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A9CCAB2E2307A45C008CE8D0 /* IGImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGImageView.swift; sourceTree = "<group>"; };
+		A9CCAB302307A89D008CE8D0 /* CommentsComposerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsComposerViewController.swift; sourceTree = "<group>"; };
 		A9F808EC22FEF37100359E2F /* PostHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		A9F808ED22FEF37100359E2F /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A9FA0D4C22F92D5D004BC24F /* UIImage+Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Firebase.swift"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				A9F808EC22FEF37100359E2F /* PostHeaderTableViewCell.swift */,
 				A9F808ED22FEF37100359E2F /* PostTableViewCell.swift */,
 				A998581322FA3D1F009783A7 /* NewsFeedTableViewController.swift */,
+				A9CCAB302307A89D008CE8D0 /* CommentsComposerViewController.swift */,
 			);
 			path = NewsFeed;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A92F981222FD15DF00B4458D /* PostComposerTableViewController.swift in Sources */,
+				A9CCAB312307A89D008CE8D0 /* CommentsComposerViewController.swift in Sources */,
 				A9AB3E8122FDCDC600CF63F1 /* Post.swift in Sources */,
 				A9F808EF22FEF37100359E2F /* PostTableViewCell.swift in Sources */,
 				A9C93B2622FA76C500F0B190 /* LoginViewController.swift in Sources */,

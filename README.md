@@ -102,3 +102,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 | Screenshot 16 |
 | ------------- |
 | ![screenshot16.png](.screenshots/screenshot16.png) |
+
+### feature/create-comment-composer-vc
+| Screenshot 17 |
+| ------------- |
+| ![screenshot17.png](.screenshots/screenshot17.png) |

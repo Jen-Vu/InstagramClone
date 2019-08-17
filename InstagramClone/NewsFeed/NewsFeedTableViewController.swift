@@ -77,6 +77,16 @@ class NewsFeedTableViewController: UITableViewController {
       }
     }
   }
+
+  // MARK: - Navigation
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ShowCommentsComposer",
+      let post = sender as? Post,
+      let vc = segue.destination as? CommentsComposerViewController {
+      vc.currentUser = currentUser
+    }
+  }
 }
 
 // MARK: - Tableview Delegates
@@ -115,6 +125,11 @@ extension NewsFeedTableViewController {
 
   override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return Storyboard.postHeaderHeight
+  }
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let selectedPost = posts?[indexPath.row] else { return }
+    performSegue(withIdentifier: "ShowCommentsComposer", sender: selectedPost)
   }
 }
 

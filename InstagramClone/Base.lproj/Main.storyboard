@@ -404,11 +404,75 @@
                     <navigationItem key="navigationItem" title="Instagram" id="dfz-dp-MYz"/>
                     <connections>
                         <segue destination="R5Y-Dr-roB" kind="show" identifier="ShowWelcome" id="6DJ-DU-tKb"/>
+                        <segue destination="TMF-jG-83L" kind="show" identifier="ShowCommentsComposer" id="eXb-rF-Uy6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4c-GJ-Pgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-610" y="911"/>
+        </scene>
+        <!--Comment-->
+        <scene sceneID="pbZ-Vw-ZhV">
+            <objects>
+                <viewController id="TMF-jG-83L" customClass="CommentsComposerViewController" customModule="InstagramClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZPE-X7-7EO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duc" translatesAutoresizingMaskIntoConstraints="NO" id="mEd-9W-e6G" customClass="IGImageView" customModule="InstagramClone" customModuleProvider="target">
+                                <rect key="frame" x="16" y="80" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="jrl-jZ-fjB"/>
+                                    <constraint firstAttribute="width" constant="36" id="oNZ-PZ-7pr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZC-FW-Q6f">
+                                <rect key="frame" x="60" y="83" width="299" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="David Tran">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LJW-zX-xto">
+                                <rect key="frame" x="16" y="124" width="343" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9Ys-O6-p2r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vem-N2-TjO" firstAttribute="trailing" secondItem="mZC-FW-Q6f" secondAttribute="trailing" constant="16" id="4fA-87-MR7"/>
+                            <constraint firstItem="LJW-zX-xto" firstAttribute="top" secondItem="mEd-9W-e6G" secondAttribute="bottom" constant="8" id="7el-nI-0Xt"/>
+                            <constraint firstItem="LJW-zX-xto" firstAttribute="leading" secondItem="vem-N2-TjO" secondAttribute="leading" constant="16" id="Mxe-hm-rvh"/>
+                            <constraint firstItem="mEd-9W-e6G" firstAttribute="top" secondItem="vem-N2-TjO" secondAttribute="top" constant="16" id="Teg-xB-eae"/>
+                            <constraint firstItem="mZC-FW-Q6f" firstAttribute="centerY" secondItem="mEd-9W-e6G" secondAttribute="centerY" id="b1A-ch-X4D"/>
+                            <constraint firstItem="mEd-9W-e6G" firstAttribute="leading" secondItem="vem-N2-TjO" secondAttribute="leading" constant="16" id="jaK-w1-T74"/>
+                            <constraint firstItem="mZC-FW-Q6f" firstAttribute="leading" secondItem="mEd-9W-e6G" secondAttribute="trailing" constant="8" id="rbY-Du-3TL"/>
+                            <constraint firstItem="vem-N2-TjO" firstAttribute="trailing" secondItem="LJW-zX-xto" secondAttribute="trailing" constant="16" id="ygI-DU-bC0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vem-N2-TjO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Comment" id="8eU-1s-zb1">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Post" id="XiW-VX-Tzc">
+                            <connections>
+                                <action selector="postBarButtonItemDidTap:" destination="TMF-jG-83L" id="Rn2-SB-cYv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="captionTextView" destination="LJW-zX-xto" id="Nbi-2I-h2O"/>
+                        <outlet property="postBarButtonItem" destination="XiW-VX-Tzc" id="8Vy-J6-FiP"/>
+                        <outlet property="profileImageView" destination="mEd-9W-e6G" id="8kP-VZ-CR3"/>
+                        <outlet property="usernameButton" destination="mZC-FW-Q6f" id="9zR-5E-cep"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtj-Yx-p7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.80000000000001" y="910.79460269865069"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aNV-cU-JY6">

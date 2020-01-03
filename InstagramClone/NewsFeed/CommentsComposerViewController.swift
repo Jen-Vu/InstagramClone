@@ -11,7 +11,7 @@ import UIKit
 class CommentsComposerViewController: UIViewController {
 
   // MARK: - Outlets
-  
+
   @IBOutlet var profileImageView: IGImageView!
   @IBOutlet var usernameButton: UIButton!
   @IBOutlet var captionTextView: UITextView!
@@ -39,9 +39,9 @@ class CommentsComposerViewController: UIViewController {
   }
 
   // MARK: - Actions
-  
+
   @IBAction func postBarButtonItemDidTap(_ sender: UIBarButtonItem) {
-    
+
   }
 }
 

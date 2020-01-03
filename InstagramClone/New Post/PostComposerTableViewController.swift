@@ -22,7 +22,7 @@ class PostComposerTableViewController: UITableViewController {
   var image: UIImage? = UIImage(named: "1")
 
   // MARK: - View Lifecycle
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
 

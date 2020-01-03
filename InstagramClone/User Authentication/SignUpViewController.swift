@@ -19,7 +19,7 @@ class SignUpViewController: UIViewController {
   @IBOutlet var createNewAccountButton: UIButton!
 
   // MARK: - View Lifecycle
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -55,11 +55,11 @@ class SignUpViewController: UIViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == ProfilePhotoViewController.identifier {
-      guard let vc = segue.destination as? ProfilePhotoViewController else { fatalError("Could not load 'ProfilePhotoViewController'") }
+      guard let profilePhotoVC = segue.destination as? ProfilePhotoViewController else { fatalError("Could not load 'ProfilePhotoViewController'") }
       guard let accountDict = sender as? [String : String] else { fatalError("Could not cast accountDict") }
-      vc.email = accountDict["email"]
-      vc.username = accountDict["username"]
-      vc.password = accountDict["password"]
+      profilePhotoVC.email = accountDict["email"]
+      profilePhotoVC.username = accountDict["username"]
+      profilePhotoVC.password = accountDict["password"]
     }
   }
 }

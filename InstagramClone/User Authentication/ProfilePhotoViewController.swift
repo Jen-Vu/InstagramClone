@@ -29,7 +29,7 @@ class ProfilePhotoViewController: UIViewController {
   var password: String?
 
   // MARK: - View Lifecycle
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -82,9 +82,6 @@ class ProfilePhotoViewController: UIViewController {
           })
         })
       })
-
-
-
     })
   }
 

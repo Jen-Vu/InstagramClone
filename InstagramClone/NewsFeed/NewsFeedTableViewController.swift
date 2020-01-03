@@ -150,11 +150,11 @@ extension NewsFeedTableViewController: UITabBarControllerDelegate {
           print("***** Error: could not get PostComposerTableViewController")
           return
         }
-        
+
         postComposerVC.image = image
         self.present(postComposerNav, animated: true)
       })
-      
+
       return false
     }
 

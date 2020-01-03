@@ -115,3 +115,6 @@ The app allows users to upload photos and videos to the service, which can be ed
 
 ### feature/create-comment-class
 > On this section, there is no difference with the change before, it was just create the new comment class, and the functionality will just look like before.
+
+### share-comments
+> On this section, there is no new view, it was created the functionality for the comment composer, now we can add comments to our posts.

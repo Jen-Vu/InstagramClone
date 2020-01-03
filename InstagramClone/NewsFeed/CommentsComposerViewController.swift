@@ -20,6 +20,7 @@ class CommentsComposerViewController: UIViewController {
   // MARK: - Properties
 
   var currentUser: User?
+  var post: Post?
 
   // MARK: - View Lifecycle
 
@@ -41,7 +42,20 @@ class CommentsComposerViewController: UIViewController {
   // MARK: - Actions
 
   @IBAction func postBarButtonItemDidTap(_ sender: UIBarButtonItem) {
+    guard let currentUser = self.currentUser, let post = self.post else {
+      fatalError("There is no logged in user or post selected")
+    }
 
+    if let caption = captionTextView.text {
+      let newComment = Comment(postUID: post.uid, from: currentUser, caption: caption)
+      newComment.save { (error) in
+        if let error = error {
+          print("Error saving comment, \(error)")
+        }
+      }
+      post.comments.append(newComment)
+      navigationController?.popViewController(animated: true)
+    }
   }
 }
 

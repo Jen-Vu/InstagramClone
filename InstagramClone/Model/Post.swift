@@ -25,6 +25,8 @@ class Post {
   var postImage: UIImage?
   var imageDownloadURL: String?
 
+  var comments = [Comment]()
+
   // MARK: - Constructor
 
   init(type: String, caption: String, createdBy: User, image: UIImage?) {

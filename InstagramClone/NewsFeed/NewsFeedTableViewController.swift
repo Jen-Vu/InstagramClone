@@ -85,6 +85,7 @@ class NewsFeedTableViewController: UITableViewController {
       let post = sender as? Post,
       let vc = segue.destination as? CommentsComposerViewController {
       vc.currentUser = currentUser
+      vc.post = post
     }
   }
 }

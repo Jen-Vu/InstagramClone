@@ -47,7 +47,7 @@ class CommentsComposerViewController: UIViewController {
     }
 
     if let caption = captionTextView.text {
-      let newComment = Comment(postUID: post.uid, from: currentUser, caption: caption)
+      let newComment = Comment(postUID: post.uid, createdBy: currentUser, caption: caption)
       newComment.save { (error) in
         if let error = error {
           print("Error saving comment, \(error)")

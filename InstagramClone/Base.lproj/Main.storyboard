@@ -977,7 +977,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostHeaderTableViewCell" rowHeight="99" id="VoW-iz-5Zc" customClass="PostHeaderTableViewCell" customModule="InstagramClone" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostHeaderTableViewCell" rowHeight="99" id="VoW-iz-5Zc" customClass="CommentTableViewCell" customModule="InstagramClone" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VoW-iz-5Zc" id="wMj-Wt-gXt">
@@ -1022,6 +1022,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="captionLabel" destination="J3S-Gw-tGg" id="zUu-Ih-wSj"/>
                                     <outlet property="profileImageView" destination="Skr-VG-ytF" id="FuJ-bf-h8y"/>
                                     <outlet property="usernameButton" destination="W7t-QV-oBr" id="h8B-CP-cxL"/>
                                 </connections>

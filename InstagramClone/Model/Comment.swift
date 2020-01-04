@@ -14,15 +14,15 @@ class Comment {
   var uid: String
   var postUID: String
   var createdAt: Double
-  var from: User
+  var createdBy: User
   var caption: String
 
   let db = Firestore.firestore()
   var docRef: DocumentReference?
 
-  init(postUID: String, from: User, caption: String) {
+  init(postUID: String, createdBy: User, caption: String) {
     self.postUID = postUID
-    self.from = from
+    self.createdBy = createdBy
     self.caption = caption
     self.createdAt = Date().timeIntervalSince1970
 
@@ -36,8 +36,8 @@ class Comment {
     self.caption = dictionary["caption"] as? String ?? ""
     //self.docRef = db.collection("posts").document(self.uid)
 
-    guard let fromDictionary = dictionary["from"] as? [String : Any] else { fatalError("There is no user on this comment") }
-    from = User(dictionary: fromDictionary)
+    guard let fromDictionary = dictionary["createdBy"] as? [String : Any] else { fatalError("There is no user on this comment") }
+    createdBy = User(dictionary: fromDictionary)
 
     postUID = dictionary["postUID"] as? String ?? ""
     docRef = db.collection("posts").document(postUID).collection("comments").document(self.uid)
@@ -48,7 +48,7 @@ class Comment {
       "postUID" : postUID,
       "uid" : uid,
       "createdAt" : createdAt,
-      "from" : from.dictionary(),
+      "createdBy" : createdBy.dictionary(),
       "caption" : caption
     ]
   }

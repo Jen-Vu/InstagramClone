@@ -123,3 +123,6 @@ The app allows users to upload photos and videos to the service, which can be ed
 | Screenshot 18 |
 | ------------- |
 | ![screenshot18](.screenshots/screenshot18.jpeg) |
+
+### create-comment-cell
+> On this section we just created the logic for the comment cell, so the state of the app keep in the same way as the tag before.

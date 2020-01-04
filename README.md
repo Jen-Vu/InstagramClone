@@ -118,3 +118,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 
 ### share-comments
 > On this section, there is no new view, it was created the functionality for the comment composer, now we can add comments to our posts.
+
+### fetch-comments-and-design-post-detail
+| Screenshot 18 |
+| ------------- |
+| ![screenshot18](.screenshots/screenshot18.jpeg) |

@@ -86,6 +86,13 @@ class NewsFeedTableViewController: UITableViewController {
       let vc = segue.destination as? CommentsComposerViewController {
       vc.currentUser = currentUser
       vc.post = post
+    } else if segue.identifier == "ShowWelcome", let vc = segue.destination as? UINavigationController {
+      vc.modalPresentationStyle = .fullScreen
+    } else if segue.identifier == "ShowPostDetail",
+      let post = sender as? Post,
+      let vc = segue.destination as? PostDetailViewController {
+      vc.currentUser = currentUser
+      vc.post = post
     }
   }
 }
@@ -130,7 +137,7 @@ extension NewsFeedTableViewController {
 
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard let selectedPost = posts?[indexPath.row] else { return }
-    performSegue(withIdentifier: "ShowCommentsComposer", sender: selectedPost)
+    performSegue(withIdentifier: "ShowPostDetail", sender: selectedPost)
   }
 }
 

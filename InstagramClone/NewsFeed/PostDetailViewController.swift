@@ -41,7 +41,42 @@ class PostDetailViewController: UITableViewController {
         return
       }
 
-      print(documents)
+      documents
+        .map { Comment(dictionary: $0.data()) }
+        .forEach {
+          self.comments.insert($0, at: 0)
+
+          DispatchQueue.main.async {
+            self.tableView.reloadData()
+          }
+      }
+
+      print("**** COMMENTS: \(self.comments)")
     })
+  }
+}
+
+// MARK: - Table view delegates
+
+extension PostDetailViewController {
+
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return comments.count + 1
+  }
+
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as? CommentTableViewCell else {
+      fatalError("Could not dequeue tableview cell in \(#file)")
+    }
+
+    if indexPath.row == 0 {
+      // post caption
+      cell.post = self.post
+    } else {
+      // comment
+      cell.comment = self.comments[indexPath.row - 1]
+    }
+
+    return cell
   }
 }

@@ -131,3 +131,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 | Screenshot 19 |
 | ------------- |
 | ![screenshot19](.screenshots/screenshot19.jpeg) |
+
+### populate-comments-to-tableview
+| Screenshot 20 |
+| ------------- |
+| ![screenshot20](.screenshots/screenshot20.jpeg) |

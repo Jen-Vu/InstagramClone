@@ -313,6 +313,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvK-dQ-H6M">
                                                     <rect key="frame" x="37" y="0.0" width="23" height="17"/>
                                                     <state key="normal" image="icon-comment"/>
+                                                    <connections>
+                                                        <action selector="commentButtonDidTap:" destination="Dnb-6Y-eav" eventType="touchUpInside" id="KcL-X9-kZa"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryl-2h-T3B">
                                                     <rect key="frame" x="76" y="0.0" width="20" height="17"/>

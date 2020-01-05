@@ -126,3 +126,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 
 ### create-comment-cell
 > On this section we just created the logic for the comment cell, so the state of the app keep in the same way as the tag before.
+
+### show-comment-composer-using-pop
+| Screenshot 19 |
+| ------------- |
+| ![screenshot19](.screenshots/screenshot19.jpeg) |

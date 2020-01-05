@@ -121,6 +121,7 @@ extension NewsFeedTableViewController {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postCell, for: indexPath) as? PostTableViewCell else { fatalError("Could not load \(Storyboard.postCell)") }
     cell.post = posts?[indexPath.section]
     cell.selectionStyle = .none
+    cell.delegate = self
     return cell
   }
 
@@ -167,5 +168,14 @@ extension NewsFeedTableViewController: UITabBarControllerDelegate {
     }
 
     return true
+  }
+}
+
+// MARK: - PostTableViewCell Delegate
+
+extension NewsFeedTableViewController: PostTableViewCellDelegate {
+
+  func commentDidTap(post: Post) {
+    performSegue(withIdentifier: "ShowCommentsComposer", sender: post)
   }
 }

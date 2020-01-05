@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol PostTableViewCellDelegate: class {
+
+  func commentDidTap(post: Post)
+}
+
 class PostTableViewCell: UITableViewCell {
 
   // MARK: - Outlets
@@ -18,12 +23,23 @@ class PostTableViewCell: UITableViewCell {
 
   // MARK: - Properties
 
+  weak var delegate: PostTableViewCellDelegate?
+
   var post: Post? {
     didSet {
       if let post = post {
         updateUI(post)
       }
     }
+  }
+
+  // MARK: - Actions
+
+  @IBAction func commentButtonDidTap(_ sender: UIButton) {
+    guard let post = self.post else {
+      fatalError("There is no post selection in \(#file)")
+    }
+    delegate?.commentDidTap(post: post)
   }
 
   // MARK: - Methods

@@ -26,6 +26,7 @@ class Post {
   var imageDownloadURL: String?
 
   var comments = [Comment]()
+  var likes = [User]()
 
   // MARK: - Constructor
 
@@ -51,6 +52,16 @@ class Post {
 
     guard let createdByDictionary = dictionary["createdBy"] as? [String : Any] else { fatalError("Cannot cast createdBy user") }
     self.createdBy = User(dictionary: createdByDictionary)
+
+    likes = []
+    if let likesDict = dictionary["likes"] as? [String : Any] {
+      self.likes = likesDict.compactMap {
+        if let userDict = $1 as? [String : Any] {
+          return User.init(dictionary: userDict)
+        }
+        return nil
+      }
+    }
   }
 
   // MARK: - Methods
@@ -101,5 +112,10 @@ extension Post {
           })
       }
     }
+  }
+
+  func likeBy(_ user: User) {
+    self.likes.append(user)
+    docRef?.collection("likes").document(user.uid).setData(user.dictionary())
   }
 }

@@ -30,7 +30,6 @@ class NewsFeedTableViewController: UITableViewController {
     tabBarController?.delegate = self
 
     observeUserLogin()
-    fetchPosts()
   }
 
   // MARK: - Methods
@@ -46,6 +45,7 @@ class NewsFeedTableViewController: UITableViewController {
           // get the current user to use it later
           if let user = document.flatMap({ $0.data().flatMap({ (data) in return User(dictionary: data) }) }) {
             self.currentUser = user
+            self.fetchPosts()
           } else {
             print("Document does not exist")
           }
@@ -119,6 +119,7 @@ extension NewsFeedTableViewController {
 
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.postCell, for: indexPath) as? PostTableViewCell else { fatalError("Could not load \(Storyboard.postCell)") }
+    cell.currentUser = self.currentUser
     cell.post = posts?[indexPath.section]
     cell.selectionStyle = .none
     cell.delegate = self

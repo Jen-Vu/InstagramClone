@@ -309,6 +309,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td1-na-gbv">
                                                     <rect key="frame" x="0.0" y="0.0" width="21" height="17"/>
                                                     <state key="normal" image="icon-like"/>
+                                                    <connections>
+                                                        <action selector="likeButtonDidTap:" destination="Dnb-6Y-eav" eventType="touchUpInside" id="2af-gw-Cft"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvK-dQ-H6M">
                                                     <rect key="frame" x="37" y="0.0" width="23" height="17"/>
@@ -387,6 +390,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="likesButton" destination="Td1-na-gbv" id="Pua-6N-WRz"/>
                                     <outlet property="numberOfLikesButton" destination="qpq-kR-WaE" id="21F-8F-b8l"/>
                                     <outlet property="postCaptionLabel" destination="V4U-YH-Qtw" id="LCQ-un-42i"/>
                                     <outlet property="postImageView" destination="lVS-R7-hTf" id="7x2-lg-pIN"/>

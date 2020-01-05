@@ -20,10 +20,12 @@ class PostTableViewCell: UITableViewCell {
   @IBOutlet var numberOfLikesButton: UIButton!
   @IBOutlet var timeAgoLabel: UILabel!
   @IBOutlet var postCaptionLabel: UILabel!
+  @IBOutlet var likesButton: UIButton!
 
   // MARK: - Properties
 
   weak var delegate: PostTableViewCellDelegate?
+  var currentUser: User?
 
   var post: Post? {
     didSet {
@@ -42,14 +44,37 @@ class PostTableViewCell: UITableViewCell {
     delegate?.commentDidTap(post: post)
   }
 
+  @IBAction func likeButtonDidTap(_ sender: UIButton) {
+    guard let post = self.post, let currentUser = self.currentUser else { fatalError("Post or User could not be loaded in \(#file)") }
+    if post.likes.contains(currentUser) {
+      // unlike
+    } else {
+      // like
+      post.likeBy(currentUser)
+    }
+
+    updateLikesUI()
+  }
+
   // MARK: - Methods
 
   private func updateUI(_ post: Post) {
     postCaptionLabel.text = post.caption
-    numberOfLikesButton.setTitle("♥︎ 18 Likes", for: .normal)
+    updateLikesUI()
 
     if let postImageURL = post.imageDownloadURL {
       postImageView.loadImage(from: postImageURL)
     }
+  }
+
+  private func updateLikesUI() {
+    guard let post = self.post, let currentUser = self.currentUser else { fatalError("Post or User could not be loaded in \(#file)") }
+    if post.likes.contains(currentUser) {
+      likesButton.setImage(UIImage(named: "icon-like-filled"), for: .normal)
+    } else {
+      likesButton.setImage(UIImage(named: "icon-like"), for: .normal)
+    }
+
+    numberOfLikesButton.setTitle("♥︎ \(post.likes.count) likes", for: .normal)
   }
 }

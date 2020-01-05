@@ -81,3 +81,12 @@ extension User {
     }
   }
 }
+
+// MARK: - Equtable
+
+extension User: Equatable {
+
+  static func == (lhs: User, rhs: User) -> Bool {
+    return lhs.uid == rhs.uid
+  }
+}

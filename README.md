@@ -136,3 +136,8 @@ The app allows users to upload photos and videos to the service, which can be ed
 | Screenshot 20 |
 | ------------- |
 | ![screenshot20](.screenshots/screenshot20.jpeg) |
+
+### like-posts
+| Screenshot 21 |
+| ------------- |
+| ![screenshot21](.screenshots/screenshot21.jpeg) |
